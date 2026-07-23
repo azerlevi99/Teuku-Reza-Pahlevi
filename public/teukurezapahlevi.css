@@ -1,0 +1,450 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+/* Navbar & Head */
+header, nav {
+    background-image: url('/images/background-atas.JPG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column; 
+    min-height: 260px;      
+    position: relative;    
+}
+
+@media (max-width: 475px) {
+    header, nav {
+        background-position: 70% center;
+    }
+}
+
+/* Navbar & Head */
+
+/* Navbar */
+.navbar {
+    padding: 30px 0;
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.navbar-box .menu li{
+    list-style-type: none;
+} 
+
+.navbar-box .menu li a {
+    text-decoration: none;
+    color: black;
+}
+/* Navbar */
+
+/* Hero */
+
+.hero {
+    height: 500px;
+}
+
+.hero-box {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.hero-box h1{
+    text-align: left;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-top: 30px;
+    margin-left: 0%;
+    width: 60%;
+}
+.hero-box h1 span{
+    font-weight: bold;
+    color: #EA580C;
+}
+/* #0099ff */
+
+@media (max-width: 475px){
+    .hero-box h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 475px){
+    .hero-box img {
+        width: 150px;
+        height: 150px;
+    }
+}
+/* Hero */
+
+header svg {
+    margin-bottom: -10px;
+}
+
+/* Tentang */
+.tentang {
+    background-color: #0F172A;
+    color:#F8FAFC;
+    padding-block: 50px;
+}
+
+.tentang .container > h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.tentang-box .box:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 150px;
+    align-items: center;
+    gap: 50px;
+}
+
+.tentang-box .box:nth-child(1) img{
+    width: 500px;
+    padding: 5px 5px 5px 5px;
+    background-color: aliceblue;
+    border: 1px solid #010101;
+    border-radius: 10px;
+    margin-inline: auto;
+}
+
+.tentang-box .box:nth-child(1) p{
+    letter-spacing: 1px;
+    line-height: 35px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.tentang-box .box:nth-child(1) a{
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;    
+}
+
+.tentang-box .box:nth-child(1) a:hover{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.tentang-box .pendidikan {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tentang-box .box .pendidikan-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.tentang-box .box .pendidikan-box:hover {
+    background-color: white;
+    color: black;
+}
+
+.tentang-box .box .pendidikan-box img{
+    width: 100px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.tentang-box .box p{
+    margin-bottom: 10px;
+}
+
+.tentang-box .box:nth-child(3){
+    margin-top: 50px;
+}
+
+@media (max-width: 768px){
+    .tentang-box .box:nth-child(1) {
+        grid-template-columns: 1fr;
+    }
+
+    .tentang-box .box:nth-child(1) img{
+        width: 200px;
+    }
+
+    .tentang-box .box:nth-child(1) div{
+        text-align: center;
+    }
+}
+
+@media (max-width: 475px) {
+    .tentang-box .box:nth-child(2) .pendidikan {
+        grid-template-columns: 1fr;
+    }
+    .tentang-box .box:nth-child(3) .pendidikan {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tentang */
+
+/* Button selengkapnya */
+.hidden-card {
+    display: none !important;
+}
+
+.hidden-card.show {
+    display: flex !important;
+    animation: munculHalus 0.5s ease-in-out;
+}
+
+@keyframes munculHalus {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Efek mirip fade-up AOS */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#btn-toggle {
+    background-color: #EA580C;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; 
+    margin: 30px auto 0;
+    justify-content: center;
+    grid-column: 1 / -1;
+}
+
+#btn-toggle:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+/* Button selengkapnya */
+
+/* Wave 2 */
+.wave, svg{
+    height: 100px;
+}
+/* Wave 2 */
+
+/* Proyek */
+
+.proyek {
+    padding-block: 5px;
+    background-color: white;
+    color: #0F172A;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.proyek .container{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.proyek .container p{
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.proyek .proyek-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.proyek-box .box {
+    padding: 30px 20px 20px 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+
+.proyek-box .box img {
+    width: 50%;
+    max-width: 200px;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.proyek-box .proyek-desc {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.proyek-box .proyek-desc h2{
+    min-height: 2.8em;
+    margin-bottom: 10px;
+}
+
+.proyek-box .proyek-desc p {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    min-height: 3em;
+    margin-bottom: 15px;
+}
+
+.proyek-box .proyek-desc .proyek-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyek-box .proyek-desc .proyek-btn a {
+    background-color: #00cba9;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.proyek-box .proyek-desc .proyek-btn a:hover {
+    background-color: #00d6b2;
+}
+
+.proyek-box .box:nth-child(1) .proyek-desc {
+    margin-top: 30px;
+}
+
+@media (max-width: 475px){
+    .proyek .proyek-box {
+    grid-template-columns: 1fr;
+}
+}
+/* Kelas */
+
+/* Kontak */
+footer {
+    background-color: #0F172A;
+    margin-top: -10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+footer .social {
+    display: flex;
+    gap: 30px;
+}
+
+footer .social a {
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .social-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 475px){
+    footer {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+      footer .social a {
+        font-size: 40px;
+    }
+}
+
+/* Kontak */
+
+/* Scroll Up */
+.scroll-up {
+    position: fixed;
+    bottom: -50px;
+    right: 50px;
+    background-color: #0F172A;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.scroll-up:hover {
+    background-color: #0000e2;
+}
+
+.scroll-up.scroll-active {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.scroll-up a {
+    color: white;
+}
+
+@media (max-width: 475px) {
+    .scroll-up.scroll-active{
+        right: 30px;
+        bottom: 20px;
+    }
+}
+/* Scroll Up */
