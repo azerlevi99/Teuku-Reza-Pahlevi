@@ -31,7 +31,7 @@ header, nav {
     position: relative;    
 }
 
-@media (max-width: 475px) {
+@media (max-width: 576px) {
     header, nav {
         background-position: 80% center;
     }
