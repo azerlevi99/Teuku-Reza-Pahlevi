@@ -19,7 +19,7 @@
 
 
 /* Navbar & Head */
-header, nav {
+header {
     background-image: url('/images/background-atas.JPG');
     background-repeat: no-repeat;
     background-attachment: fixed;  
@@ -27,7 +27,7 @@ header, nav {
     background-position: center;
     display: flex;
     flex-direction: column; 
-    min-height: 260px;      
+    min-height: 600px;      
     position: relative;    
 }
 
