@@ -33,7 +33,7 @@ header, nav {
 
 @media (max-width: 475px) {
     header, nav {
-        background-position: 70% center;
+        background-position: 80% center;
     }
 }
 
