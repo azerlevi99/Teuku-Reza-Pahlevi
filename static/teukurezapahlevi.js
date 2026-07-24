@@ -21,3 +21,17 @@ function toggleGuru() {
         btn.innerText = "Lihat Selengkapnya";
     }
 }
+
+function togglePrestasi() {
+    const hiddenCards = document.querySelectorAll('.hidden-card-two');
+    const btn = document.getElementById('btn-toggle-prestasi');
+    hiddenCards.forEach(card => {
+        card.classList.toggle('show');
+    });
+    
+    if (hiddenCards[0].classList.contains('show')) {
+        btn.innerText = "Lihat Lebih Sedikit";
+    } else {
+        btn.innerText = "Lihat Selengkapnya";
+    }
+}
