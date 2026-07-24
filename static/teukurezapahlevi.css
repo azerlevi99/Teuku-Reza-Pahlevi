@@ -33,7 +33,8 @@ header, nav {
 
 @media (max-width: 576px) {
     header, nav {
-        background-position: 80% center;
+        background-position: 85% center;
+        background-attachment: scroll;
     }
 }
 
